@@ -24,9 +24,9 @@
         "Mixpanel/**/*.swift"
       ],
       "exclude_files": [
-        "Mixpanel/Mixpanel.{m.h}",
-        "Mixpanel/MPLogger.h",
-        "Mixpanel/NSDate+MPBase64.{m,h}"
+        "Mixpanel/**/Mixpanel.{m.h}",
+        "Mixpanel/**/MPLogger.h",
+        "Mixpanel/**/NSDate+MPBase64.{m,h}"
       ],
       "resources": [
         "Mixpanel/**/*.{png,storyboard}"
@@ -41,7 +41,7 @@
         "QuartzCore"
       ],
       "dependencies": [
-        "Mixpanel/Shared"
+        /*"Mixpanel/Shared"*/
       ],
       "libraries": "icucore"
     },
