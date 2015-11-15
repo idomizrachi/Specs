@@ -27,7 +27,7 @@
         "Mixpanel/Mixpanel.{m.h}",
         "Mixpanel/MPLogger.h",
         "Mixpanel/NSDate+MPBase64.{m,h}"
-      ].
+      ],
       "resources": [
         "Mixpanel/**/*.{png,storyboard}"
       ],
@@ -51,7 +51,7 @@
         "Mixpanel/Mixpanel.{m,h}",
         "Mixpanel/MPLogger.h",
         "Mixpanel/NSData+MPBase64.{m,h}"
-      ],
+      ]
     },
     {
       "name": "AppExtension",
