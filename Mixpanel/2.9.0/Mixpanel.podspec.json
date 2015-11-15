@@ -18,15 +18,24 @@
   "default_subspecs": "Mixpanel",
   "subspecs": [
     {
+      "name": "Shared",
+      "source_files": [
+        "Mixpanel/Mixpanel.{m,h}",
+        "Mixpanel/MPLogger.h",
+        "Mixpanel/NSData+MPBase64.{m,h}"
+      ],
+      "libraries": "icucore"
+    },
+    {
       "name": "Mixpanel",
       "source_files": [
         "Mixpanel/**/*.{m,h}",
         "Mixpanel/**/*.swift"
       ],
       "exclude_files": [
-        "Mixpanel/**/Mixpanel.{m.h}",
-        "Mixpanel/**/MPLogger.h",
-        "Mixpanel/**/NSDate+MPBase64.{m,h}"
+        "Mixpanel/Mixpanel.{m,h}",
+        "Mixpanel/MPLogger.h",
+        "Mixpanel/NSData+MPBase64.{m,h}"
       ],
       "resources": [
         "Mixpanel/**/*.{png,storyboard}"
@@ -41,23 +50,12 @@
         "QuartzCore"
       ],
       "dependencies": [
-        /*"Mixpanel/Shared"*/
+        "Mixpanel/Shared"
       ],
       "libraries": "icucore"
     },
     {
-      "name": "Shared",
-      "source_files": [
-        "Mixpanel/Mixpanel.{m,h}",
-        "Mixpanel/MPLogger.h",
-        "Mixpanel/NSData+MPBase64.{m,h}"
-      ]
-    },
-    {
       "name": "AppExtension",
-      "dependencies": [
-        "Mixpanel/Shared"
-      ],
       "xcconfig": {
         "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) MIXPANEL_APP_EXTENSION"
       },
@@ -69,6 +67,9 @@
         "Accelerate",
         "CoreGraphics",
         "QuartzCore"
+      ],
+      "dependencies": [
+        "Mixpanel/Shared"
       ],
       "libraries": "icucore"
     }
